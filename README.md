@@ -1,4 +1,4 @@
-# Elasticsearch StatefulSet Data Pod Openshift
+# Elasticsearch + Logstash + Kibana 5.4.0 StatefulSet Data Pod Openshift
 This directory contains Openshift configurations which run elasticsearch data pods as a [`StatefulSet`](https://kubernetes.io/docs/concepts/abstractions/controllers/statefulsets/), using storage provisioned using a [`StorageClass`](http://blog.kubernetes.io/2016/10/dynamic-provisioning-and-storage-in-kubernetes.html). Be sure to read and understand the documentation in the root directory, which deploys the data pods as a `Deployment` using an `emptyDir` for storage.
 
 ![Architecture](images/Elasticsearch-Kubernetes-Cluster.png)

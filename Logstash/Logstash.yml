@@ -34,7 +34,10 @@ spec:
     spec:
       containers:
       - name: logstash
-        image: docker.elastic.co/logstash/logstash:5.4.0
+        image: jcperez/logstash54
+        env:
+        - name: "XPACK_MONITORING_ENABLED"
+          value: "false"
         ports:
         - containerPort: 5044
           name: lumberjack
