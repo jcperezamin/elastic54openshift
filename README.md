@@ -17,7 +17,7 @@ oc patch scc/privileged -p '{"allowedCapabilities": ["IPC_LOCK", "SYS_RESOURCE"]
 
 oc edit scc privileged
 
-## Deploy
+## Deploy ElasticSearch
 The root directory contains instructions for deploying elasticsearch using a `Deployment` with transient storage for data pods. These brief instructions show a deployment using the `StatefulSet` and `StorageClass`.
 
 ```
@@ -34,8 +34,22 @@ oc create -f aws-storage-class.yaml
 oc create -f es-data-svc.yaml
 oc create -f es-data-stateful.yaml
 ```
-
 Openshift creates the pods for a `StatefulSet` one at a time, waiting for each to come up before starting the next, so it may take a few minutes for all pods to be provisioned.
+
+
+## Deploy Kibana
+
+```
+oc create -f Kibana/kibana-logging.yml
+```
+
+## Deploy Logstash
+
+```
+oc create -f Logstash/Logstash.yml
+```
+
+
 
 ## References
 
