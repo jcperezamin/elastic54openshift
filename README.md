@@ -6,7 +6,7 @@ This directory contains Openshift configurations which run elasticsearch data po
 ## Storage
 The [`aws-storage-class.yaml`](aws-storage-class.yaml) file creates a `StorageClass` which allocates persistent disks in an Amazon Web Services environment. It should be relatively simple to modify this file to suit your needs for a different environment.
 
-The [`es-data-stateful.yaml`](es-data-stateful.yaml) file contains a `volumeClaimTemplates` section which references the `StorageClass` defined in [`aws-storage-class.yaml`](aws-storage-class.yaml), and requests a 1 GB disk. This is plenty of space for a demonstration cluster, but will fill up quickly under moderate to heavy load. Consider modifying the disk size to your needs.
+The [`es-data-stateful.yaml`](es-data-stateful.yaml) file contains a `volumeClaimTemplates` section which references the `StorageClass` defined in [`aws-storage-class.yaml`](aws-storage-class.yaml), and requests a 5 GB disk. This is plenty of space for a demonstration cluster, but will fill up quickly under moderate to heavy load. Consider modifying the disk size to your needs.
 
 
 ## Edit Openshift Security Context

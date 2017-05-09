@@ -65,9 +65,9 @@ spec:
   - metadata:
       name: storage
       annotations:
-        volume.beta.kubernetes.io/storage-class: standard
+        volume.beta.kubernetes.io/storage-class: openshift-storage-us-east-1a
     spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
         requests:
-          storage: 1Gi
+          storage: 5Gi
